@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TimerDemo</string>
+    <string name="zero">0</string>
+    <string name="reset_timer">Reset Timer</string>
+</resources>

@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.mintedtech.timer_demo.MainActivity">
+    <item
+        android:id="@+id/reset_timer"
+        android:title="@string/reset_timer"
+        android:icon="@android:drawable/ic_delete"
+        app:showAsAction="ifRoom|withText"/>
+</menu>
