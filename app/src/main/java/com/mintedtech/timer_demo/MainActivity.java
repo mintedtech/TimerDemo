@@ -2,6 +2,7 @@ package com.mintedtech.timer_demo;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity
 
     private void setupTimer () {
         // Create the Handler object
-        mHandler = new Handler ();
+        mHandler = new Handler (Looper.getMainLooper ());
 
         // Create the Runnable that, after being called,
         // calls the on timer tick method and then itself one second later, and on and on...
@@ -198,7 +199,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putLong("SECONDS_ELAPSED", mSecondsElapsed);
         outState.putBoolean("TIMER_PAUSED", mTimerPaused);
